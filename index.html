@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Automatic Rabbit</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <h2>I'm in the process of building out my first electron app! It embeds a twich livestream. A feature I'm now going to start working on is only showing the livestream if said stream is online. If you're seeing this it means the livestream is hidden!</h2>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+
+    <span id ="browser-view"></span>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
