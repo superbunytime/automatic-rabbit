@@ -6,6 +6,8 @@ const createWindow = () => {
     icon: "sussyb3Scream.png",
     width: 800,
     height: 600,
+    transparent: true,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
@@ -14,15 +16,14 @@ const createWindow = () => {
   win.loadFile("index.html");
 
   let wc = win.webContents
-  wc.openDevTools()
-  win.maximize()
+  // win.maximize()
+  // wc.openDevTools()
 
   const view = new BrowserView()
   win.setBrowserView(view)
-  console.log(win.getBounds())
   view.setBounds({ x: 0, y: 0, width: 1220, height: 1900 })
   //really frustrating; i want to set width and height dynamically but am having difficulty doing so
-  view.webContents.loadURL('https://twitch.tv/sussybnuuy')
+  // view.webContents.loadURL('https://player.twitch.tv/?channel=sussybnuuy&parent=streamernews.example.com')
   //this code works to embed stream.
   //now what we need to do is hide this behind an event.
   //a placeholder event can be a button press
