@@ -1,0 +1,20 @@
+.draggable-area {
+    width: 300px;
+    height: 300px;
+    -webkit-app-region: drag;
+  }
+
+  img {
+animation: rotate 2s infinite;
+width: 300px;
+height: 300px;
+}
+
+@keyframes rotate {
+0% {
+  transform: rotate(-45deg)
+}
+100% {
+  transform: rotate(45deg)
+}
+}
